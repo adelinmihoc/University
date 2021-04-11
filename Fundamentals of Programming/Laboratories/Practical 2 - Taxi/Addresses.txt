@@ -1,0 +1,12 @@
+1,theodor mihali,3,12,20
+2000,dorobantilor,20,50,100
+2,Primaverii,4,5,6
+3,Soarelui,7,8,9
+4,Stradei,10,11,12
+5,Principala,13,14,15
+6,Industriala,16,17,18
+7,Garii,19,20,21
+8,Unirii,22,23,24
+9,Primariei,25,26,27
+10,Calea Florest,28,29,30
+44,garii,1,2,3
