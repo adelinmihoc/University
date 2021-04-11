@@ -1,8 +1,7 @@
 # Fundamentals of Programming
 
-## Syllabus
+## Specific competencies acquired
 
-### Specific competencies acquired
 #### Professional competencies:
 - Description of programming paradigms and of language specific mechanisms, as well
 as identification of syntactic and semantic differences.
