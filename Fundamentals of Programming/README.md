@@ -27,7 +27,7 @@ engineering
 - How to write programs: problem statement, requirements, feature
 driven development process
 - Example: calculator, iteration modelling
-- 
+
 #### 2. Procedural programming
 - Compound types: list, tuple, dictionary
 - Functions: test cases, definition, variable scope, calling, parameter
