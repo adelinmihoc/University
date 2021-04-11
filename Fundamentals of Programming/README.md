@@ -18,4 +18,25 @@ towards the scientific and didactic fields, respecting professional and ethical 
 development of abilities for knowledge exploitation, for adapting to the needs of a dynamic
 society and for communication in a widely used foreign language.
 
+## Syllabus
+
+#### 1. Introduction to software development processes
+- What is programming: algorithm, program, basic elements of the
+Python language, Python interpreter, basic roles in software
+engineering
+- How to write programs: problem statement, requirements, feature
+driven development process
+- Example: calculator, iteration modelling
+- 
+#### 2. Procedural programming
+- Compound types: list, tuple, dictionary
+- Functions: test cases, definition, variable scope, calling, parameter
+passing
+- Test-driven development (TDD) steps, refactoring
+
+#### 3. Modular programming
+- What is a module: Python module definition, variable scope in a
+module, packages, standard module libraries, deployment
+
+
 
