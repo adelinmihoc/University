@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/PriorityQueue.dir/App.cpp.o CMakeFiles/PriorityQueue.dir/ExtendedTest.cpp.o CMakeFiles/PriorityQueue.dir/ShortTest.cpp.o CMakeFiles/PriorityQueue.dir/PriorityQueue.cpp.o  -o PriorityQueue 

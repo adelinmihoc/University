@@ -1,0 +1,4 @@
+/home/adelin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/adelin/CLionProjects/PriorityQueue
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/adelin/CLionProjects/PriorityQueue/cmake-build-debug

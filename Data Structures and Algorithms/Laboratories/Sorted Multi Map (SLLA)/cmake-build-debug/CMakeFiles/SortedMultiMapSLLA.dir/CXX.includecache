@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adelin/CLionProjects/SortedMultiMapSLLA/ExtendedTest.cpp
+exception
+-
+assert.h
+-
+algorithm
+-
+vector
+-
+iostream
+-
+SMMIterator.h
+/home/adelin/CLionProjects/SortedMultiMapSLLA/SMMIterator.h
+SortedMultiMap.h
+/home/adelin/CLionProjects/SortedMultiMapSLLA/SortedMultiMap.h
+ExtendedTest.h
+/home/adelin/CLionProjects/SortedMultiMapSLLA/ExtendedTest.h
+
+/home/adelin/CLionProjects/SortedMultiMapSLLA/ExtendedTest.h
+
+/home/adelin/CLionProjects/SortedMultiMapSLLA/SMMIterator.h
+SortedMultiMap.h
+/home/adelin/CLionProjects/SortedMultiMapSLLA/SortedMultiMap.h
+
+/home/adelin/CLionProjects/SortedMultiMapSLLA/SortedMultiMap.h
+vector
+-
+utility
+-
+iostream
+-
+
