@@ -1,0 +1,23 @@
+1. Find all lines ending with a vowel in file /etc/passwd
+	grep "[aeiouAEIOU]$" passwd
+	grep -i "[aeiou]$" passwd
+
+2. Find all lines in file /etc/passwd that contain 3 vowels next
+   to each other
+	grep -i "[aeiou]\{3\}" passwd
+
+3. Find all processes belonging to a certain user
+	ps -ef | grep "^adelin\>"
+
+4. Display file /etc/passwd replacing all non-letters with space
+	sed "s/[^a-zA-Z]/ /g" passwd
+
+5. Display file /etc/passwd duplicating all non-digits
+	sed "s/\([^0-9]\)/\1\1/g" passwd
+
+6. Display file /etc/passwd replacing all digits and letters with =
+	sed "s/[0-9a-zA-Z]/=/g" passwd
+
+7. Calculate the product of the non-zero differences between fields
+   3 and 4 of file /etc/passwd
+

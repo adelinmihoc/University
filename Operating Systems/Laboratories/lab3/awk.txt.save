@@ -1,0 +1,3 @@
+1. Sa se afiseze DOAR numele si prenumele utilizatorilor connectati la server.
+	awk -F: '{print $5}' passwd
+2. Sa se numere cati utilizatori dintr-o anumita grupa sunt conectati la server si sa se afiseze mesajul: "Din grupa xxxx sunt nnnn utilizatori conectati"

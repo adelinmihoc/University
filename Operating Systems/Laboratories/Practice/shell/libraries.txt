@@ -1,0 +1,13 @@
+
+smth.c
+#include ads
+#include asd
+#include asdf
+#include sdaf
+
+smth.c
+#include ads
+#include asd
+#include asdf
+#include sdaf
+

@@ -1,0 +1,9 @@
+1.Găsiți toate liniile care contin cuvantul 'cat' dintr-un fisier dat.
+	grep 'cat' file.txt
+2.Găsiți toate liniile care incep cu un cuvant cu prefixul 'ing' dintr-un fișier dat.
+	grep '^ing' file.txt
+3.Găsiți toate liniile cu număr impar de caractere dintr-un fișier dat.
+	grep -v '^\(..\)*$' file.txt
+4. Extrageți cuvintele cu 3 consoane consecutive dintr-un text.
+	grep '[qwrtpsdfghjklzxcvbnm]\{3\}' file.txt
+

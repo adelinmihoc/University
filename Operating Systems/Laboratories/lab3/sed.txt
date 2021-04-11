@@ -1,0 +1,9 @@
+1.Prefixați fiecare linie dintr-un fișier cu 'abc'.
+	sed -i 's/^/abc/' file.txt
+2. Inlocuiți fiecare linie goală dintr-un fișier cu 'empty'.
+	$ sed -i 's/^\s*$/empty/' file.txt
+3. Convertiți taburile in 3 spații intr-un text dat.
+	sed -i 's/\t/   /g' file.txt
+4. Rotiți cu o poziție fiecare triplet de caractere dintr-un fișier.
+	sed -i 's/\<\(.\)\(.\)\(.\)\>/\3\1\2/g' file.txt
+

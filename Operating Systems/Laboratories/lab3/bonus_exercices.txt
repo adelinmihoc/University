@@ -1,0 +1,93 @@
+1. Find all lines ending with a vowel in file /etc/passwd
+        grep "[aeiouAEIOU]$" passwd
+        grep -i "[aeiou]$" passwd
+
+2. Find all lines in file /etc/passwd that contain 3 vowels next
+   to each other
+        grep -i "[aeiou]\{3\}" passwd
+
+3. Find all processes belonging to a certain user
+        ps -ef | grep "^adelin\>"
+
+4. Display file /etc/passwd replacing all non-letters with space
+        sed "s/[^a-zA-Z]/ /g" passwd
+
+5. Display file /etc/passwd duplicating all non-digits
+        sed "s/\([^0-9]\)/\1\1/g" passwd
+
+6. Display file /etc/passwd replacing all digits and letters with =
+        sed "s/[0-9a-zA-Z]/=/g" passwd
+
+7. Calculate the product of the non-zero differences between fields
+   3 and 4 of file /etc/passwd
+	awk -F: -f '7d.awk' passwd
+
+8. Display the penultimate (last but one) field on
+   every second line of /etc/passwd
+	awk -F: 'NR%2==0 {print $(NF - 1)}' passwd
+
+9. Display the second directory name from the home path
+   of each user
+	awk -F: '{print $6}' passwd | awk -F/ '{print $3}'
+
+Set 2
+ 
+1. Find all lines starting with "r" in file /etc/passwd
+	grep '^r' passwd
+
+2. Find all lines in file /etc/passwd that contain
+   5 digits next to each other
+	grep '[0-9]\{5\}' passwd
+
+3. Find all processes belonging to a certain user
+	ps -ef | grep '^adelin'
+
+4. Display file /etc/passwd replacing all vowels with =
+	sed 's/[aeiou]/=/g' passwd
+
+5. Display file /etc/passwd duplicating all lower letters
+	sed 's/\([a-z]\)/\1\1/g' passwd
+
+6. Display file /etc/passwd replacing all digits and letter
+   with -
+	sed 's/[0-9a-zA-Z]/-/g' passwd
+
+7. Calculate the sum of the products of fields 3 and 4 of file
+   /etc/passwd
+	awk -F: -f 7.awk passwd
+7.awk:
+BEGIN {
+        sum = 0
+}
+
+{
+        p = $3 * $4
+        sum = sum + p
+}
+
+END {
+        print sum
+}
+
+8. Display the first directory name from the home path 
+   of each user
+	awk -F: '{print $6}' passwd | awk -F/ '{print $2}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

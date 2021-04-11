@@ -1,0 +1,13 @@
+1. Calculate the average file size in a given
+directory hierarchy, ignoring the smallest and the
+largest file. If there are multiple files with the
+same minimum or maximum size, ignore just one of
+each.
+	1.sh
+
+2. Extract from a file, all the character
+sequences containing alternatively letter followed
+by digit, and calculate the sum of all those
+digits.
+	2.sh && 2.awk
+

@@ -1,0 +1,4 @@
+1.Calculați numărul mediu de linii din fișierele text 
+  dintr-un director dat ca parametru (comenzi: find, file, wc).
+	ex1.sh
+
