@@ -1,8 +1,6 @@
 # Object Oriented Programming
 
-## Specific competencies acquired
-
-### Professional competencies:
+### Specific professional competencies acquired:
 - Description of programming paradigms and of language specific mechanisms, as well
 as identification of syntactic and semantic differences.
 - Explanation of existing software applications, on different levels of abstraction
