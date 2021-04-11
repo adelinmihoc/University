@@ -1,0 +1,2 @@
+file
+*Just add in the first line of the config file the type of the admin repo (file/memory)*

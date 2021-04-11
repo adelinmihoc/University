@@ -1,0 +1,12 @@
+Piertotum Locomotor,stone,358,Warrior with poleax
+Laykyun Setkyar,marble,287,Bouddha
+Ushiku Daibutsu,bronze,890,Amitabha
+Guanyin,stone,78,Guanyin
+Emperors Yan and Huang,rock,46,Yan Di et Huang Di
+Dai,marble,1500,White Daikannon
+Peter the Great,metal,708,Peter the Great
+The legendary beauty of the Miao,marble,3,Yang'asha
+Birth of the New World,metal,236,Christopher Colombus
+asd,stone,358,Warrior with poleax
+asdfjhb,stone,358,Warrior with poleax
+asdfj,stone,358,Warrior with poleax

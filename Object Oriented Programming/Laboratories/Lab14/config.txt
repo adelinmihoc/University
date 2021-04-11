@@ -1,0 +1,6 @@
+csv_file
+html_file
+
+# available options for repository: 'memory', 'csv_file', 'html_file'
+# first row is for admin repository
+# second row is for user repository

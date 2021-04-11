@@ -1,0 +1,10 @@
+qid1,Mary,Is cereal soup? Why or why not?
+qid2,Mary,Is a hotdog a sandwich? Why or why not?
+qid3,Mary,What’s the best type of cheese?
+qid4,James,How many chickens would it take to kill an elephant?
+qid5,James,What mythical creature would improve the world most if it existed?
+qid6,James,What would be the absolute worst name you could give your child?
+qid7,Nicola,If peanut butter wasn’t called peanut butter, what would it be called?
+qid8,Nicola,What’s invisible but you wish people could see?
+qid9,Nicola,What’s the weirdest smell you have ever smelled?
+qid10,Nicola,What is something that everyone looks stupid doing?
