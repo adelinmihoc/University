@@ -4,24 +4,24 @@
 #### 1. Basic graph theory definitions 
 - graph, multigraph, directed graph/multigraph, walk, trail, path
 - basics on graph representations
-- 
+
 #### 2. In-deep study of possible graph representations
 
 #### 3. Connectivity and shortest path problems
 - Depth-first and breadth-first traversal of a graph
 - Connected and strongly-connected components
-- 
+
 #### 4. Minimum-cost path in a graph
 - Dynamic programming approach
 - Bellman-Ford algorithm
-- 
+
 #### 5. Dijkstra algorithm . A-star algorithm. Floyd-Warshal algorithm
 
 #### 6. Dependency graphs
 - Partial order and topological sorting
 - Topological sorting algorithms
 - Strongly connected components algorithms
-- 
+
 #### 7. Activity planning problem andalgorithms
 
 #### 8. Trees and forests
