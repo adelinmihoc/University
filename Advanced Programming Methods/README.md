@@ -10,6 +10,6 @@
 
 ## Syllabus
 #### 1. Introduction to Java platform: 
-- platform, language syntax, primitive data types, arrays, classes, interfaces, packages, enums, overriding, overloading, exceptions.
+ platform, language syntax, primitive data types, arrays, classes, interfaces, packages, enums, overriding, overloading, exceptions.
 ###
 
