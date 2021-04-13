@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GUI.ProgramRunController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="636.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="387.0" prefWidth="600.0">
+                    <children>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Label fx:id="nrPrgStates_Label" alignment="BOTTOM_LEFT" text="Number of Program States:" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="File Table:" textAlignment="CENTER" />
+                                <ListView fx:id="fileTable_ListView" prefHeight="200.0" prefWidth="200.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Out:" />
+                                <ListView fx:id="out_ListView" prefHeight="200.0" prefWidth="200.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heap Table:" />
+                                <TableView fx:id="heapTable_TableView" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="heapTableAddr_TableCol" prefWidth="79.3333410024643" text="Address" />
+                                        <TableColumn fx:id="heapTableVal_TableCol" prefWidth="82.66666412353516" text="Value" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Program States Identifiers:" />
+                                <ListView fx:id="prgStatesIden_ListView" prefHeight="353.0" prefWidth="139.0" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="362.0" prefWidth="199.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Symbol Table:" wrappingWidth="74.02734375" />
+                                <TableView fx:id="symTable_TableView" prefHeight="171.0" prefWidth="199.0">
+                                    <columns>
+                                        <TableColumn fx:id="symTableVarName_TableCol" prefWidth="100.0" text="Variable Name" />
+                                        <TableColumn fx:id="symTableValue_TableCol" prefWidth="64.00003051757812" text="Value" />
+                                    </columns>
+                                </TableView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Execution Stack:" />
+                                <ListView fx:id="exeStack_ListView" prefHeight="165.0" prefWidth="199.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <Button id="run_Button" fx:id="run_Button" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="89.0" text="Run One Step" textAlignment="CENTER" />
+            </children>
+        </VBox>
+    </children>
+</StackPane>
