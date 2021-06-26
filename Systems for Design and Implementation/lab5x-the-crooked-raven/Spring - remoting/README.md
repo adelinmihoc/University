@@ -1,9 +1,8 @@
-# Lab 5: Networking
-- continue to work in teams
-- convert your project to a client-server application using sockets
-- **simulate an RPC server** (messages sent between the client and the server must be handled in a unitary manner (simulate RPC calls) )
-- the server must be concurrent; use Java 8 language features; threads with ExecutorService
-- on the client side, service calls must be **non-blocking**
-- using external libraries for RPC is not allowed; only sockets
-- only the db (jdbc) persistence is needed
-- SOLID principles and other best practices discussed in the context of the previous project should also be applied here
+# Lab 6: remotting
+- Continue to work in teams on the generated repository from the previous lab
+- Suggestion: at the end of this lab, the repository should contain two folders - one folder for Lab5 and another one for Lab6
+- Convert your project from a client-server application using sockets to an application using RMI
+- Use Spring remoting
+- Data must be persisted to a database; use JdbcTemplate (Spring)
+- Use Gradle for dependency management
+- XML configuration for Spring is not allowed; annotations and Java Config classes only
