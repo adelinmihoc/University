@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Users</title>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                dataType: "json",
+                type: "GET",
+                url: "getAllUsers.php",
+                success: renderTable
+            });
+            function renderTable(data) {
+                let trHtml = '';
+                $.each(data, function(i, item) {
+                    trHtml += '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' +
+                        item.username + '</td><td>' + item.password +
+                        '</td><td>' + item.age + '</td><td>' + item.role + '</td><td>' +
+                        item.profile + '</td><td>' + item.email + '</td><td>' + item.webpage + '</td></tr>';
+                });
+                $('#usersTable > tbody:last-child').append(trHtml);
+            }
+
+        });
+    </script>
+</head>
+<body>
+
+<h1>
+    Enterprise System
+</h1>
+
+<h2>Manage users</h2>
+
+<div class="main">
+    <table id="usersTable">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Role</th>
+            <th>Profile</th>
+            <th>Email</th>
+            <th>Webpage</th>
+        </tr>
+    </table>
+    <div class="buttons">
+        <a href="userAdd.html">Add new user</a>
+        <a href="userDelete.html">Delete user</a>
+        <a href="userUpdate.html">Update user</a>
+        <a href="userLookup.html">Lookup user</a>
+        <a href="userBrowse.html">Browse users</a>
+    </div>
+</div>
+
+</body>
+</html>

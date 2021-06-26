@@ -1,0 +1,44 @@
+.menu {
+  height: 60px;
+  background-color: #5F9EA0;
+  text-align: center;
+  vertical-align: center;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.submenu {
+  visibility: hidden; 
+  display: flex;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 1px;
+}
+
+.components {
+	width: 400px;
+	text-align: center;
+  	vertical-align: center;
+  	border-radius: 5px;
+}
+
+.submenu1_component, 
+.submenu2_component, 
+.submenu3_component, 
+.submenu4_component,
+.submenu5_component {
+	border: 1px solid black;
+  visibility: hidden;
+  margin-left: 63px;
+  width: 200px;
+  text-align: center;
+  vertical-align: center;
+  height: 50px;
+  background-color: #F0F8FF;
+}
+
+p {
+	font-size: 20px;
+}

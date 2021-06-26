@@ -1,0 +1,44 @@
+
+<form [formGroup]="parentUpdateForm" (ngSubmit)="onSubmit(parentUpdateForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Update VacationDestination</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="id" id="id" name="id" placeholder="id">
+    </mat-form-field> <br>
+    <mat-error *ngIf="id">
+      <div *ngIf="id.invalid && (id.dirty || id.touched)">
+        Please enter a valid id
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="destination" id="destination" name="destination" placeholder="destination">
+    </mat-form-field> <br>
+    <mat-error *ngIf="destination">
+      <div *ngIf="destination.invalid && (destination.dirty || destination.touched)">
+        Please enter a valid destination
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="country" placeholder="country">
+    </mat-form-field><br>
+    <mat-error *ngIf="country">
+      <div *ngIf="country.invalid && (country.dirty || country.touched)">
+        Please enter a valid country
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="price" placeholder="price">
+    </mat-form-field><br>
+    <mat-error *ngIf="price">
+      <div *ngIf="price.invalid && (price.dirty || price.touched)">
+        Please enter a valid price
+      </div>
+    </mat-error>
+    <button mat-button color="accent" type="submit">Update</button>
+  </div>
+</form>

@@ -1,0 +1,53 @@
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>username</th>
+    <th>password</th>
+    <th>name</th>
+    <th>age</th>
+    <th>role</th>
+    <th>profile</th>
+    <th>email</th>
+    <th>webpage</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.age}}</td>
+    <td>{{user.role}}</td>
+    <td>{{user.profile}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.webpage}}</td>
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+<form [formGroup]="filterForm" (ngSubmit)="onSubmit(filterForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Filter Users by role</h2>
+    <hr>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="role" id="role" >
+        <mat-option value="role1">role1</mat-option>
+        <mat-option value="role2">role2</mat-option>
+        <mat-option value="role3">role3</mat-option>
+        <mat-option value="role4">role4</mat-option>
+      </mat-select>
+    </mat-form-field> <br>
+    <mat-error *ngIf="role">
+      <div *ngIf="role.invalid && (role.dirty || role.touched)">
+        Please enter a valid role
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" type="submit">Filter</button>
+  </div>
+</form>

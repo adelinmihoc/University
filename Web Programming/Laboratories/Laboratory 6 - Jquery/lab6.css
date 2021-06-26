@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.desktop_wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.left_side {
+/*	border: 1px solid black;
+*/	position: absolute;
+	width: 50%;
+	height: 100vh;
+	z-index: 1000;
+}
+
+.right_side {
+/*	border: 1px solid blue;
+*/	
+	position: absolute;
+	width: 50%;
+	height: 100vh;
+	z-index: 1000;
+	margin-left: 50%; 
+}
+
+.desktop1 {
+/*	border: 1px solid black;
+*/	
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+}
+
+.desktop2 {
+/*	border: 1px solid black;
+*/	
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+}
+
+.desktop3 {
+/*	border: 1px solid black;
+*/	
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+}
+
+.desktop4 {
+/*	border: 1px solid black;
+*/	
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+}
+
+.bgr1 {
+	background-image: url('desktop1.jpeg');
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	position: absolute;
+	z-index: -100;
+}
+
+.bgr2 {
+	background-image: url('desktop2.jpg');
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	position: absolute;
+	z-index: -100;	
+}
+
+.bgr3 {
+	background-image: url('desktop3.jpeg');
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	position: absolute;
+	z-index: -100;
+}
+
+.bgr4 {
+	background-image: url('desktop4.jpg');
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	position: absolute;
+	z-index: -100;
+}
+
+img {
+	
+}
+
+.horizontally_allign {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.box1 {
+	border: 1px solid black;
+
+}

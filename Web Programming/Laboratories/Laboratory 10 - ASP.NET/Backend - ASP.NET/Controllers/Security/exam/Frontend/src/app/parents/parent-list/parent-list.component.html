@@ -1,0 +1,37 @@
+<h2>
+  Documents and movies
+</h2>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>name/title</th>
+    <th>contents/duration</th>
+  </tr>
+  <ng-container *ngFor="let document of documents; index as i">
+  <ng-container *ngFor="let movie of movies; index as j">
+    <tr *ngIf="i">
+      <td *ngIf="i">{{document.id}}</td>
+      <td *ngIf="i">{{document.name}}</td>
+      <td *ngIf="i">{{document.contents}}</td>
+    </tr>
+    <tr *ngIf="j">
+      <td *ngIf="j">{{movie.id}}</td>
+      <td *ngIf="j">{{movie.title}}</td>
+      <td *ngIf="j">{{movie.duration}}</td>
+    </tr>
+  </ng-container>
+  </ng-container>
+
+
+<!--  <tr *ngFor="let document of documents">-->
+<!--    <td>{{document.id}}</td>-->
+<!--    <td>{{document.name}}</td>-->
+<!--    <td>{{document.contents}}</td>-->
+<!--  </tr>-->
+<!--  <tr *ngFor="let movie of movies">-->
+<!--    <td>{{movie.id}}</td>-->
+<!--    <td>{{movie.title}}</td>-->
+<!--    <td>{{movie.duration}}</td>-->
+<!--  </tr>-->
+</table>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Add User</title>
+</head>
+<body>
+<h1>Add User</h1>
+
+<div class="mainForm">
+  <form id="addForm" method="post" autocomplete="off">
+    <label>
+      name
+      <input type="text" id="name" placeholder="name" name="name" autocomplete="off" />
+    </label>
+    <label>
+      username
+      <input type="text" id="username" placeholder="username" name="username" autocomplete="off">
+    </label>
+    <label>
+      password
+      <input type="text" id="password" placeholder="password" name="password" autocomplete="off">
+    </label>
+    <label>
+      age
+      <input type="text" id="age" placeholder="age" name="age" autocomplete="off">
+    </label>
+    <label>
+      role
+      <input type="text" id="role" placeholder="role" name="role" autocomplete="off">
+    </label>
+    <label>
+      profile
+      <input type="text" id="profile" placeholder="profile" name="profile" autocomplete="off">
+    </label>
+    <label>
+      email
+      <input type="text" id="email" placeholder="email" name="email" autocomplete="off">
+    </label>
+    <label>
+      webpage
+      <input type="text" id="webpage" placeholder="webpage" name="webpage" autocomplete="off">
+    </label>
+    <input type="button" value="Save User" name="save" id="buttonSave">
+  </form>
+  <a href="index.html">Home</a>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#buttonSave').on('click', function () {
+      console.log("buttonCliked");
+      $("#buttonSave").attr("disabled", "disabled");
+      const name = $('#name').val();
+      const username = $('#username').val();
+      const password = $('#password').val();
+      const age = $('#age').val();
+      const role = $('#role').val();
+      const profile = $('#profile').val();
+      const email = $('#email').val();
+      const webpage = $('#webpage').val();
+      if (name !== "" && username !== "" && password !== "" && age !== "" &&
+              role !== "" && profile !== "" && email !== "" && webpage !== "") {
+        console.log(name);
+        $.ajax({
+          url: "addUser.php",
+          type: "POST",
+          data: {
+            name: name,
+            username: username,
+            password: password,
+            age: age,
+            role: role,
+            profile: profile,
+            email: email,
+            webpage: webpage
+          },
+          cache: false,
+          success: function (dataResult) {
+            const result = JSON.parse(dataResult);
+            if(result.statusCode === 200) {
+              $("#buttonSave").removeAttr("disabled");
+              alert("User added successfully!");
+            }
+            else if (result.statusCode === 201) {
+              alert("Error occurred!");
+            }
+          }
+        })
+      }
+      else {
+        alert("Please fill all the fields!");
+      }
+    })
+  })
+</script>
+
+</body>
+</html>

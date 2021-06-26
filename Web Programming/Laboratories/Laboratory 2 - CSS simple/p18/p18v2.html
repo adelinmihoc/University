@@ -1,0 +1,202 @@
+<!-- 18. Write a web page which has on top of it a rainbow built using divs
+and gradient colors. The rainbow should be tilted with an angle
+(it should not be perfectly horizontal) and the width of the rainbow
+on the left side should be smaller than the width of the rainbow on the right side. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Problem 18</title>
+<style>
+    body {
+      background-color: lightblue;
+
+    }
+    .first_container {
+      width: 1650px;
+      height: 100px;
+      position: relative;
+      margin: 20px;
+      transform: rotate(-25deg);
+    }
+    .container {
+        width: 1650px;
+        height: 300px;
+        position: relative;
+        margin: 20px;
+    }
+    .red{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 400px solid red;
+        border-radius: 50%;
+        background: -moz-linear-gradient(45deg, red, yellow);
+        background: -webkit-linear-gradient(45deg, red, yellow);
+        -moz-background-origin: border;
+        background-origin: border-box;
+        box-shadow:
+          inset 0 0 12px red,
+          0 0 12px red,
+          inset -999px 0 0 #fff;
+
+    }
+    .orange{
+      width: 100%;
+      height: 100%;
+      border: 400px solid transparent;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 100px;
+      left: 0;
+      background: -moz-linear-gradient(45deg, orange, yellow);
+      background: -webkit-linear-gradient(45deg, orange, yellow);
+      -moz-background-origin: border;
+      background-origin: border-box;
+      box-shadow:
+        inset 0 0 150px orange,
+        0 0 150px orange,
+        inset -999px 0 0 #fff;
+    }
+    .yellow{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 200px;
+      left: 0;
+      opacity: 1;
+      border: 400px solid transparent;
+      border-radius: 50%;
+
+      background: -moz-linear-gradient(45deg, yellow, green);
+      background: -webkit-linear-gradient(45deg, yellow, green);
+      -moz-background-origin: border;
+      background-origin: border-box;
+      box-shadow:
+        inset 0 0 150px yellow,
+        0 0 150px yellow,
+        inset -999px 0 0 #fff;
+    }
+    .green{
+      width: 120%;
+      height: 100%;
+      position: absolute;
+      top: 300px;
+      left: 0;
+      opacity: 1;
+      border: 400px solid transparent;
+      border-radius: 50%;
+      background: -moz-linear-gradient(45deg, green, blue);
+      background: -webkit-linear-gradient(45deg, green, blue);
+      -moz-background-origin: border;
+      background-origin: border-box;
+      box-shadow:
+        inset 0 0 120px green,
+        0 0 120px green,
+        inset -999px 0 0 #fff;
+    }
+    .blue{
+      width: 130%;
+      height: 100%;
+      position: absolute;
+      top: 400px;
+      left: 0;
+      opacity: 1;
+      border: 400px solid transparent;
+      border-radius: 50%;
+      background: -moz-linear-gradient(45deg, blue, indigo);
+      background: -webkit-linear-gradient(45deg, blue, indigo);
+      -moz-background-origin: border;
+      background-origin: border-box;
+      box-shadow:
+        inset 0 0 150px blue,
+        0 0 150px blue,
+        inset -999px 0 0 #fff;
+    }
+    .indigo{
+      width: 140%;
+      height: 100%;
+      position: absolute;
+      top: 500px;
+      left: 0;
+      opacity: 1;
+      border: 400px solid transparent;
+      border-radius: 50%;
+      background: -moz-linear-gradient(45deg, indigo, violet);
+      background: -webkit-linear-gradient(45deg, indigo, violet);
+      -moz-background-origin: border;
+      background-origin: border-box;
+      box-shadow:
+        inset 0 0 150px indigo,
+        0 0 150px indigo,
+        inset -999px 0 0 #fff;
+    }
+    .violet{
+      width: 130%;
+      height: 100%;
+      position: absolute;
+      top: 600px;
+      left: -50px;
+      opacity: 1;
+      border: 400px solid transparent;
+      border-radius: 50%;
+      background: -moz-linear-gradient(45deg, violet, violet);
+      background: -webkit-linear-gradient(45deg, violet, violet);
+      -moz-background-origin: border;
+      background-origin: border-box;
+      box-shadow:
+        inset 0 0 150px violet,
+        0 0 150px violet,
+        inset -999px 0 0 #fff;
+    }
+    .first_circle{
+      width: 4000px;
+      height: 4000px;
+      position: absolute;
+      border: 350px solid lightblue;
+      border-radius: 50%;
+      top: -600px;
+      left: -550px;
+    }
+    .second_circle{
+      width: 160%;
+      height: 100%;
+      position: absolute;
+      border: 700px solid lightblue;
+      border-radius: 50%;
+      top: 700px;
+      left: -650px;
+    }
+
+    .imag {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 900px;
+      left: 150px;
+    }
+</style>
+</head>
+<body>
+  <div class="first_container">
+    <div class="container">
+        <div class="red" style=""></div>
+        <div class="red orange" style="background: orange;"></div>
+        <div class="orange yellow" style="background: yellow;"></div>
+        <div class="yellow green" style="background: green;"></div>
+        <div class="green blue" style="background: blue;"></div>
+        <div class="blue indigo" style="background: indigo;"></div>
+        <div class="indigo violet" style="background: violet;"></div>
+    </div>
+    <div class="container first_circle" style="background: transparent"> </div>
+    <div class="first_circle second_circle" style="background: lightblue"> </div>
+  </div>
+  <div class="imag">
+    <img src="img3.png">
+  </div>
+</body>
+</html>

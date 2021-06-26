@@ -1,0 +1,40 @@
+<h1>Add User</h1>
+
+<div class="mainForm">
+  <label>
+    name
+    <input #name>
+  </label><br/>
+  <label>
+    username
+    <input #username>
+  </label><br/>
+  <label>
+    password
+    <input #password>
+  </label><br/>
+  <label>
+    age
+    <input #age>
+  </label><br/>
+  <label>
+    role
+    <input #role>
+  </label><br/>
+  <label>
+    profile
+    <input #profile>
+  </label><br/>
+  <label>
+    email
+    <input #email>
+  </label><br/>
+  <label>
+    webpage
+    <input #webpage>
+  </label><br/>
+  <button (click)="addUser(name.value, username.value, password.value, Number(age.value),
+                            role.value, profile.value, email.value, webpage.value)">
+    Save
+  </button>
+</div>

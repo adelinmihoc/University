@@ -1,0 +1,39 @@
+<h2>Filter Users by name</h2>
+
+<div *ngIf="users">
+  <table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>username</th>
+      <th>password</th>
+      <th>age</th>
+      <th>role</th>
+      <th>profile</th>
+      <th>email</th>
+      <th>webpage</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.password}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.role}}</td>
+      <td>{{user.profile}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.webpage}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="mainForm">
+  <div class="form-group">
+    <label>name:<input class="form-control" #nameInput/></label><br/>
+  </div>
+
+  <button class="button" (click)="lookupUsers(nameInput.value)">
+    Lookup
+  </button>
+</div>
+

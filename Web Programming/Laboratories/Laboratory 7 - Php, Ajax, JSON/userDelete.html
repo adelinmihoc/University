@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Delete</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Delete User</h1>
+
+<div class="main">
+    <form class="mainForm">
+        <label>
+            id
+            <input type="text" id="id" placeholder="id" name="id" autocomplete="off" />
+        </label>
+        <input type="button" value="Delete User" name="delete" id="buttonDelete">
+    </form>
+    <a href="index.html">Home</a>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#buttonDelete').on('click', function () {
+            $("#buttonDelete").attr("disabled", "disabled");
+            const id = $('#id').val();
+            if (id !== "") {
+                $.ajax({
+                    url: "deleteUser.php",
+                    type: "POST",
+                    data: {
+                        id: id
+                    },
+                    cache: false,
+                    success: function (dataResult) {
+                        var result = JSON.parse(dataResult);
+                        if(result.statusCode === 200) {
+                            $("#buttonDelete").removeAttr("disabled");
+                            alert("User deleted successfully!");
+                        }
+                        else if (result.statusCode === 201) {
+                            alert("Error occurred!");
+                        }
+                    }
+                })
+            }
+            else {
+                alert("Please fill all the fields!");
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

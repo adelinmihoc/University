@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="lab5.css">
+  </head>
+  <body>
+    <h1>Dropdown Menu</h1>
+    <h3>Write a javascript which implements a drop-down menu with 5 principal submenus and between 3 and 5 components for each submenu.</h3>
+
+
+    <div class="menu" onmouseover="show('submenu')" onmouseout="hide('submenu')">
+      <p style="font-weight: bold">Menu</p>
+      <div class="submenu" onmouseover="show('submenu1_component')" onmouseout="hide('submenu1_component')" style="margin-top: 35px; background-color: #4682B4">
+        <p>Submenu1</p>
+        <div class="components">
+          <div class='submenu1_component'>
+            <p>component1</p>
+          </div>
+          <div class='submenu1_component'>
+            <p>component2</p>
+          </div>
+          <div class='submenu1_component'>
+            <p>component3</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="submenu" onmouseover="show('submenu2_component')" onmouseout="hide('submenu2_component')" style="background-color: #ADD8E6">
+        <p>Submenu2</p>
+        <div class="components">
+          <div class="submenu2_component">
+            <p>component1</p>
+          </div>
+          <div class="submenu2_component">
+            <p>component2</p>
+          </div>
+          <div class="submenu2_component">
+            <p>component3</p>
+          </div>
+          <div class="submenu2_component">
+            <p>component4</p>
+          </div>
+          <div class="submenu2_component">
+            <p>component5</p>
+          </div>
+        </div>
+      </div>
+      <div class="submenu" onmouseover="show('submenu3_component')" onmouseout="hide('submenu3_component')" style="background-color: #4682B4  ">
+        <p>Submenu3</p>
+        <div class="components">
+          <div class="submenu3_component">
+            <p>component1</p>
+          </div>
+          <div class="submenu3_component">
+            <p>component2</p>
+          </div>
+          <div class="submenu3_component">
+            <p>component3</p>
+          </div>
+          <div class="submenu3_component">
+            <p>component4</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="submenu" onmouseover="show('submenu4_component')" onmouseout="hide('submenu4_component')" style="background-color: #ADD8E6">
+        <p>Submenu4</p>
+        <div class="components">
+          <div class="submenu4_component">
+            <p>component1</p>
+          </div>
+          <div class="submenu4_component">
+            <p>component2</p>
+          </div>
+          <div class="submenu4_component">
+            <p>component3</p>
+          </div>
+        </div>
+      </div>
+      <div class="submenu" onmouseover="show('submenu5_component')" onmouseout="hide('submenu5_component')" style="background-color: #4682B4  ">
+        <p>Submenu5</p>
+        <div class="components">
+          <div class="submenu5_component">
+            <p>component1</p>
+          </div>
+          <div class="submenu5_component">
+            <p>component2</p>
+          </div>
+          <div class="submenu5_component">
+            <p>component3</p>
+          </div>
+          <div class="submenu5_component">
+            <p>component4</p>
+          </div>
+          <div class="submenu5_component">
+            <p>component5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="lab5.js">
+    </script>
+
+  </body>
+</html>

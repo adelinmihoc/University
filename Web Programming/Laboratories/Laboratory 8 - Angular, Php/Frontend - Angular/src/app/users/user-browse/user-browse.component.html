@@ -1,0 +1,39 @@
+<h1>Users</h1>
+
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>password</th>
+    <th>age</th>
+    <th>role</th>
+    <th>profile</th>
+    <th>email</th>
+    <th>webpage</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.age}}</td>
+    <td>{{user.role}}</td>
+    <td>{{user.profile}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.webpage}}</td>
+  </tr>
+</table>
+
+<h1>Browse User</h1>
+
+<div class="mainForm">
+  <label for="roleSelect">role</label>
+  <select id="roleSelect" #roleSelect>
+    <option *ngFor="let role of roles">
+      {{role}}
+    </option>
+  </select>
+  <button (click)="browseUsers(roleSelect.value)">Browse</button>
+</div>

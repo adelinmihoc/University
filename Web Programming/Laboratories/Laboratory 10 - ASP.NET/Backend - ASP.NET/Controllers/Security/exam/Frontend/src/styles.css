@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.matFormWrapper {
+  background-color: #333333;
+  width: 30%;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+mat-form-field {
+  color: white;
+}
+
+.h2form {
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 35%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #333333;
+  color: white;
+  font-weight: normal;
+
+}
+
+tr:hover {
+  background-color: #ececec;
+}

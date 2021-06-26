@@ -1,0 +1,122 @@
+<!-- 5. Write a web page which displays a number of images in a table.
+The table should be formatted using a style sheet.
+Also when the mouse is over an image,
+the image should increase opacity with a specific amount.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Problem 5</title>
+    <style>
+      body {
+        background-color: #6B8E23;
+      }
+      h1 {
+        color: darkred;
+        text-align: center;
+      }
+
+      .grid {
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 40px;
+      }
+
+      .grid td {
+        position: relative;
+        max-width: 500px;
+        max-height: 500px;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity .5s ease;
+        background-color: #008CBA;
+      }
+
+      .grid td:hover .overlay {
+        opacity: 0.5;
+      }
+
+    </style>
+  </head>
+  <h1>Pandas Collection</h1>
+  <body>
+  <table class="grid">
+  <tr>
+    <td>
+      <img src="img1.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img2.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img3.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="img4.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img5.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img6.jpeg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="img7.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img8.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img9.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="img10.jpg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img11.jpeg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+    <td>
+      <img src="img12.jpeg" height="500px" width="500px" />
+      <div class="overlay">
+      </div>
+    </td>
+  </tr>
+</table>
+  </body>
+</html>

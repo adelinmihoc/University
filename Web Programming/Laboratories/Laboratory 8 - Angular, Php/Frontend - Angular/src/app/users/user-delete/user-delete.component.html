@@ -1,0 +1,12 @@
+<h2>Delete User by id</h2>
+
+<div class="mainForm">
+  <div>
+    <label>id:<input required id="idInput" #idInput/></label><br/>
+  </div>
+
+  <button class="button" (click)="deleteUser(Number(idInput.value))">
+    Delete
+  </button>
+
+</div>

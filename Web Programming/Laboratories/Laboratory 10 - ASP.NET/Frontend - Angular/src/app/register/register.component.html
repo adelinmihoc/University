@@ -1,0 +1,82 @@
+
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Register</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="username" id="username" name="username" placeholder="username">
+    </mat-form-field> <br>
+    <mat-error *ngIf="username">
+      <div *ngIf="username.invalid && (username.dirty || username.touched)">
+        Please enter a valid username
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput type="password" formControlName="password" placeholder="password">
+    </mat-form-field><br>
+    <mat-error *ngIf="password">
+      <div *ngIf="password.invalid && (password.dirty || password.touched)">
+        Please enter a valid password
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="name">
+    </mat-form-field><br>
+    <mat-error *ngIf="name">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        Please enter a valid name
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="age" placeholder="age">
+    </mat-form-field><br>
+    <mat-error *ngIf="age">
+      <div *ngIf="age.invalid && (age.dirty || age.touched)">
+        Please enter a valid age
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="role" placeholder="role">
+    </mat-form-field><br>
+    <mat-error *ngIf="role">
+      <div *ngIf="role.invalid && (role.dirty || role.touched)">
+        Please enter a valid role
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="profile" placeholder="profile">
+    </mat-form-field><br>
+    <mat-error *ngIf="profile">
+      <div *ngIf="profile.invalid && (profile.dirty || profile.touched)">
+        Please enter a valid profile
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="email" placeholder="email">
+    </mat-form-field><br>
+    <mat-error *ngIf="email">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)">
+        Please enter a valid email
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="webpage" placeholder="webpage">
+    </mat-form-field><br>
+    <mat-error *ngIf="webpage">
+      <div *ngIf="webpage.invalid && (webpage.dirty || webpage.touched)">
+        Please enter a valid webpage
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" type="submit">Register</button>
+  </div>
+</form>

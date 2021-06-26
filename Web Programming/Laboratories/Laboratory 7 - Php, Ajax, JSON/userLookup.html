@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lookup user</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Lookup User by name</h1>
+
+<div class="main">
+    <table id="usersTable2">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Role</th>
+            <th>Profile</th>
+            <th>Email</th>
+            <th>Webpage</th>
+        </tr>
+    </table>
+    <form class="mainForm">
+        <label>
+            name
+            <input type="text" id="name" placeholder="name" name="name" autocomplete="off" />
+        </label>
+        <input type="button" value="Lookup User" name="lookup" id="buttonLookup">
+    </form>
+    <a href="index.html">Home</a>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#buttonLookup').on('click', function () {
+            $("#buttonLookup").attr("disabled", "disabled");
+            const name = $('#name').val();
+            if (name !== "") {
+                $.ajax({
+                    url: "lookupUser.php",
+                    type: "GET",
+                    dataType: "json",
+                    data: {
+                        name: name
+                    },
+                    cache: false,
+                    success: function (dataResult) {
+                        $("#buttonLookup").removeAttr("disabled");
+                        let trHtml = '';
+                        $.each(dataResult, function(i, item) {
+                            trHtml += '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' +
+                                item.username + '</td><td>' + item.password +
+                                '</td><td>' + item.age + '</td><td>' + item.role + '</td><td>' +
+                                item.profile + '</td><td>' + item.email + '</td><td>' + item.webpage + '</td></tr>';
+                        });
+                        $('#usersTable2 > tbody:last-child').append(trHtml);
+                    }
+                })
+            }
+            else {
+                alert("Please fill all the fields!");
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

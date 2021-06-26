@@ -1,0 +1,32 @@
+<p>
+  <mat-toolbar>
+    <button mat-icon-button [mat-menu-trigger-for]="mainMenu" class="" aria-label="">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #mainMenu="matMenu">
+      <a mat-menu-item routerLink="/parents">Documents movies list</a>
+<!--      <a mat-menu-item routerLink="/filter">Filter destinations</a>-->
+<!--      <a mat-menu-item routerLink="/parent-add">Add Destination</a>-->
+<!--      <a mat-menu-item routerLink="/parent-delete">Delete Destination</a>-->
+<!--      <a mat-menu-item routerLink="/parent-update"-->
+<!--         [state]="{pid:'', pdestination:'', pcountry:'', pprice:''}">Update Destination</a>-->
+    </mat-menu>
+    <span>{{title}}</span>
+    <span class="spacer"></span>
+<!--    <a routerLink="/register" mat-button style="float: left">-->
+<!--      Register-->
+<!--      <mat-icon>how_to_reg</mat-icon>-->
+<!--    </a>-->
+    <a routerLink="/login" mat-button>
+      Login
+      <mat-icon>account_circle</mat-icon>
+    </a>
+    <a routerLink="/logout" mat-button>
+      Logout
+      <mat-icon>exit_to_app</mat-icon>
+    </a>
+
+  </mat-toolbar>
+</p>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,33 @@
+<div id="filterColor"></div>
+
+<ul id="navBar" class="navBar">
+  <li class="navBar">
+    <h1 class="navBar" routerLink="/">{{title}}</h1></li>
+  <li class="navBar">
+    <button class="navbarButton navBar" mat-button [mat-menu-trigger-for]="UserMenu" routerLinkActive="active">Users</button>
+    <mat-menu #UserMenu="matMenu" class="navBar">
+      <a class="navBar" routerLink="/users" mat-menu-item>Browse users</a>
+      <a class="navBar" routerLink="/user-add" mat-menu-item>Add user</a>
+      <a class="navBar" routerLink="/user-delete" mat-menu-item>Delete user</a>
+      <a class="navBar" routerLink="/user-update"
+         [state]="{uid:'', uusername:'', upassword:'', uname:'', uage:'',
+         urole:'', uprofile:'', uemail:'', uwebpage:''}" mat-menu-item>Update user</a>
+      <a class="navBar" routerLink="/user-filter" mat-menu-item>Filter users</a>
+
+    </mat-menu>
+  </li>
+  <li class="navBarRight">
+    <button class="navbarButton" mat-button (click)="doLogout()">Logout</button>
+  </li>
+  <li class="navBarRight">
+    <button class="navbarButton" mat-button routerLink="/login">Login</button>
+  </li>
+  <li class="navBarRight">
+    <button class="navbarButton" mat-button routerLink="/register">Register</button>
+  </li>
+</ul>
+<br>
+<br>
+<br>
+
+<router-outlet></router-outlet>
