@@ -18,4 +18,3 @@
 #### 11. Evaluating the Relational Algebra Operators
 #### 12. Conceptual Modeling 
 #### 13. Data Streams
-#### 14. Problems 
