@@ -1,4 +1,4 @@
-# University Projects
+# UBB Projects
 
 ## First Semester
 [Fundamentals of Programming](https://github.com/adelinmihoc/University/tree/main/Fundamentals%20of%20Programming)
