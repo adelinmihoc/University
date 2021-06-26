@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?><Clients><Client id="20">
+  <firstName>John</firstName>
+  <lastName>Jonzz</lastName>
+  <addressId>20</addressId>
+  <age>30</age>
+  <phoneNumber/>
+</Client>
+<Client id="10">
+  <firstName>Jack</firstName>
+  <lastName>Michaels</lastName>
+  <addressId>10</addressId>
+  <age/>
+  <phoneNumber/>
+</Client>
+<Client id="30">
+  <firstName>George</firstName>
+  <lastName>Tyson</lastName>
+  <addressId>20</addressId>
+  <age>30</age>
+  <phoneNumber>090909090909090</phoneNumber>
+</Client>
+<Client id="40">
+  <firstName>Mike</firstName>
+  <lastName>Tyson</lastName>
+  <addressId>10</addressId>
+  <age>42</age>
+  <phoneNumber>01231310120313</phoneNumber>
+</Client>
+<Client id="50">
+  <firstName>Jackson</firstName>
+  <lastName>Smith</lastName>
+  <addressId>10</addressId>
+  <age>67</age>
+  <phoneNumber/>
+</Client>
+</Clients>

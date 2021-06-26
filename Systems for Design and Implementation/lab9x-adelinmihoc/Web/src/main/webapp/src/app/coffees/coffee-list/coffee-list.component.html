@@ -1,0 +1,28 @@
+<h2>Coffees</h2>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>origin</th>
+    <th>price</th>
+    <th>quantity</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor="let coffee of coffees">
+    <td>{{coffee.id}}</td>
+    <td>{{coffee.name}}</td>
+    <td>{{coffee.origin}}</td>
+    <td>{{coffee.price}}</td>
+    <td>{{coffee.quantity}}</td>
+    <td>
+      <button mat-button color="accent" (click)="deleteCoffee(coffee.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-button color="accent"
+              (click)="goToUpdate(coffee.id, coffee.name, coffee.origin, coffee.price, coffee.quantity)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </tr>
+</table>

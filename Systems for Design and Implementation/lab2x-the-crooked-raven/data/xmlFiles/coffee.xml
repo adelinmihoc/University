@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?><Coffees><Coffee id="50">
+  <name>DriedRobusta</name>
+  <origin>India</origin>
+  <quantity>400</quantity>
+  <price>50</price>
+</Coffee>
+<Coffee id="30">
+  <name>ArabicaHoney</name>
+  <origin>Ethiopia</origin>
+  <quantity>200</quantity>
+  <price>75</price>
+</Coffee>
+<Coffee id="10">
+  <name>Arabica</name>
+  <origin>Brazil</origin>
+  <quantity/>
+  <price/>
+</Coffee>
+<Coffee id="20">
+  <name>Robusta</name>
+  <origin>Sumatra</origin>
+  <quantity>200</quantity>
+  <price/>
+</Coffee>
+<Coffee id="40">
+  <name>WashedHoney</name>
+  <origin>Salvador</origin>
+  <quantity/>
+  <price>100</price>
+</Coffee>
+</Coffees>

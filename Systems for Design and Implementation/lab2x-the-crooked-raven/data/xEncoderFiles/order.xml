@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15" class="java.beans.XMLDecoder">
+ <object class="domain.Order" id="Order0">
+  <void property="coffeesId">
+   <void method="add">
+    <int>30</int>
+   </void>
+   <void method="add">
+    <int>40</int>
+   </void>
+   <void method="add">
+    <int>20</int>
+   </void>
+  </void>
+  <void property="id">
+   <object class="org.apache.commons.lang3.tuple.ImmutablePair">
+    <int>20</int>
+    <int>20</int>
+   </object>
+  </void>
+  <void property="status">
+   <object class="java.lang.Enum" method="valueOf">
+    <class>domain.Status</class>
+    <string>canceled</string>
+   </object>
+  </void>
+  <void property="time">
+   <object class="java.time.LocalDateTime" method="of">
+    <int>2012</int>
+    <object class="java.lang.Enum" method="valueOf">
+     <class>java.time.Month</class>
+     <string>DECEMBER</string>
+    </object>
+    <int>12</int>
+    <int>11</int>
+    <int>45</int>
+    <int>45</int>
+   </object>
+  </void>
+ </object>
+ <object class="domain.Order" id="Order1">
+  <void property="coffeesId">
+   <void method="add">
+    <int>10</int>
+   </void>
+  </void>
+  <void property="id">
+   <object class="org.apache.commons.lang3.tuple.ImmutablePair">
+    <int>30</int>
+    <int>30</int>
+   </object>
+  </void>
+  <void property="status">
+   <object class="java.lang.Enum" id="Status0" method="valueOf">
+    <class>domain.Status</class>
+    <string>delivered</string>
+   </object>
+  </void>
+  <void property="time">
+   <object class="java.time.LocalDateTime" method="of">
+    <int>2021</int>
+    <object class="java.lang.Enum" method="valueOf">
+     <class>java.time.Month</class>
+     <string>MARCH</string>
+    </object>
+    <int>17</int>
+    <int>13</int>
+    <int>54</int>
+    <int>3</int>
+   </object>
+  </void>
+ </object>
+ <object class="domain.Order" id="Order2">
+  <void property="coffeesId">
+   <void method="add">
+    <int>10</int>
+   </void>
+   <void method="add">
+    <int>20</int>
+   </void>
+  </void>
+  <void property="id">
+   <object class="org.apache.commons.lang3.tuple.ImmutablePair">
+    <int>40</int>
+    <int>40</int>
+   </object>
+  </void>
+  <void property="status">
+   <object idref="Status0"/>
+  </void>
+  <void property="time">
+   <object class="java.time.LocalDateTime" method="of">
+    <int>2007</int>
+    <object class="java.lang.Enum" method="valueOf">
+     <class>java.time.Month</class>
+     <string>MAY</string>
+    </object>
+    <int>30</int>
+    <int>12</int>
+    <int>24</int>
+    <int>32</int>
+   </object>
+  </void>
+ </object>
+ <object class="domain.Order">
+  <void property="id">
+   <object class="org.apache.commons.lang3.tuple.ImmutablePair">
+    <int>10</int>
+    <int>10</int>
+   </object>
+  </void>
+ </object>
+</java>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15" class="java.beans.XMLDecoder">
+ <object class="domain.Coffee">
+  <void property="id">
+   <int>10</int>
+  </void>
+  <void property="name">
+   <string>Arabica</string>
+  </void>
+  <void property="origin">
+   <string>CentralAmerica</string>
+  </void>
+ </object>
+ <object class="domain.Coffee">
+  <void property="id">
+   <int>30</int>
+  </void>
+  <void property="name">
+   <string>Robusta</string>
+  </void>
+  <void property="origin">
+   <string>Sumatra</string>
+  </void>
+  <void property="price">
+   <int>500</int>
+  </void>
+  <void property="quantity">
+   <int>400</int>
+  </void>
+ </object>
+ <object class="domain.Coffee">
+  <void property="id">
+   <int>20</int>
+  </void>
+  <void property="name">
+   <string>ArabicaHoney</string>
+  </void>
+  <void property="origin">
+   <string>Ethiopia</string>
+  </void>
+  <void property="quantity">
+   <int>200</int>
+  </void>
+ </object>
+</java>

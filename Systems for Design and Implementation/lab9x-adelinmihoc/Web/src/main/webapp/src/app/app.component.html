@@ -1,0 +1,61 @@
+<div id="filterColor"></div>
+
+<ul id="navBar" class="navBar">
+  <li class="navBar">
+    <h1 class="navBar">{{title}}</h1></li>
+  <li class="navBar">
+    <button class="navbarButton navBar" mat-button [mat-menu-trigger-for]="AddressMenu" routerLinkActive="active">Addresses</button>
+    <mat-menu #AddressMenu="matMenu" class="navBar">
+      <a class="navBar" routerLink="/addresses" mat-menu-item>Address list</a>
+      <a class="navBar" routerLink="/address-add" mat-menu-item>Add address</a>
+      <a class="navBar" routerLink="/address-delete" mat-menu-item>Delete address</a>
+      <a class="navBar" routerLink="/address-update"
+         [state]="{aid:'',acity:'', astreet:'', anumber:''}" mat-menu-item>
+        Update address
+      </a>
+    </mat-menu>
+  <li class="navBar">
+    <button class="navbarButton navBar" mat-button [mat-menu-trigger-for]="CoffeeMenu" routerLinkActive="active">Coffees</button>
+    <mat-menu #CoffeeMenu="matMenu" class="navBar">
+      <a class="navBar" routerLink="/coffees" mat-menu-item>Coffee list</a>
+      <a class="navBar" routerLink="/coffee-add" mat-menu-item>Add coffee</a>
+      <a class="navBar" routerLink="/coffee-delete" mat-menu-item>Delete coffee</a>
+      <a class="navBar" routerLink="/coffee-update"
+         [state]="{cid:'', cname:'', corigin:'', cprice:'', cquantity:''}" mat-menu-item>
+        Update coffee
+      </a>
+      <a class="navBar" routerLink="/coffee-filter" mat-menu-item>Filter coffees</a>
+    </mat-menu>
+  <li class="navBar">
+    <button class="navbarButton navBar" mat-button [mat-menu-trigger-for]="CustomerMenu" routerLinkActive="active">Customers</button>
+    <mat-menu #CustomerMenu="matMenu" class="navBar">
+      <a class="navBar" routerLink="/customers" mat-menu-item>Customer list</a>
+      <a class="navBar" routerLink="/customer-add" mat-menu-item>Add customer</a>
+      <a class="navBar" routerLink="/customer-delete" mat-menu-item>Delete customer</a>
+      <a class="navBar" routerLink="/customer-update"
+         [state]="{cid:'', cfirstname:'', clastname:'', cphonenumber:'', cage:'', caddressid:''}" mat-menu-item>
+        Update customer
+      </a>
+      <a class="navBar" routerLink="/customer-filter" mat-menu-item>Filter customers</a>
+    </mat-menu>
+  </li>
+  <li class="navBar">
+    <button class="navbarButton navBar" mat-button [mat-menu-trigger-for]="OrderMenu" routerLinkActive="active">Orders</button>
+    <mat-menu #OrderMenu="matMenu" class="navBar">
+      <a class="navBar" routerLink="/orders" mat-menu-item>Order list</a>
+      <a class="navBar" routerLink="/order-add"
+         [state]="{oid:'', ostatus:'', olocaldatetime:''}" mat-menu-item>Add order</a>
+      <a class="navBar" routerLink="/order-delete" mat-menu-item>Delete order</a>
+      <a class="navBar" routerLink="/order-update"
+         [state]="{oid:'', ostatus:'', olocaldatetime:''}" mat-menu-item>
+        Change order status
+      </a>
+      <a class="navBar" routerLink="/order-filter" mat-menu-item>Filter orders</a>
+    </mat-menu>
+  </li>
+</ul>
+<br>
+<br>
+<br>
+<router-outlet></router-outlet>
+

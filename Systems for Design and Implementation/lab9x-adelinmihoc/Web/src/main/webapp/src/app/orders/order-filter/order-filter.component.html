@@ -1,0 +1,61 @@
+<h2>Customers</h2>
+
+<table *ngIf="orders">
+  <tr>
+    <th>id</th>
+    <th>status</th>
+    <th>date</th>
+    <th>client info</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{order.id}}</td>
+    <td>{{order.status}}</td>
+    <td>{{order.localDateTime}}</td>
+    <td>({{order.customer.id}}) &nbsp; {{order.customer.firstName}} {{order.customer.lastName}}</td>
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+<table *ngIf="coffees">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>origin</th>
+    <th>price</th>
+    <th>quantity</th>
+  </tr>
+  <tr *ngFor="let coffee of coffees">
+    <td>{{coffee.id}}</td>
+    <td>{{coffee.name}}</td>
+    <td>{{coffee.origin}}</td>
+    <td>{{coffee.price}}</td>
+    <td>{{coffee.quantity}}</td>
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+<form [formGroup]="orderFilterForm">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Filter customers by name</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="customerId" id="customerId" name="customerId" placeholder="customerId">
+    </mat-form-field> <br>
+
+    <button mat-button color="accent" (click)="onSubmitFilterCustomerOrders(orderFilterForm)">
+      Filter customer orders
+    </button>
+
+    <button mat-button color="accent" (click)="onSubmitFilterCustomerCoffees(orderFilterForm)">
+      Filter customer coffees
+    </button>
+
+  </div>
+</form>

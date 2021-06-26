@@ -1,0 +1,2 @@
+10, LosAngeles, Palm Street, 20
+20, Moscow, Kremlin Street, 45

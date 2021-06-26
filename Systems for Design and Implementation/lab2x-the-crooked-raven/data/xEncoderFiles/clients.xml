@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15" class="java.beans.XMLDecoder">
+ <object class="domain.Client">
+  <void property="addressId">
+   <int>10</int>
+  </void>
+  <void property="firstName">
+   <string>John</string>
+  </void>
+  <void property="id">
+   <int>10</int>
+  </void>
+  <void property="lastName">
+   <string>Jackson</string>
+  </void>
+ </object>
+ <object class="domain.Client">
+  <void property="addressId">
+   <int>30</int>
+  </void>
+  <void property="age">
+   <int>50</int>
+  </void>
+  <void property="firstName">
+   <string>Mike</string>
+  </void>
+  <void property="id">
+   <int>30</int>
+  </void>
+  <void property="lastName">
+   <string>Tyson</string>
+  </void>
+  <void property="phoneNumber">
+   <string>0009999000090909</string>
+  </void>
+ </object>
+ <object class="domain.Client">
+  <void property="addressId">
+   <int>20</int>
+  </void>
+  <void property="age">
+   <int>40</int>
+  </void>
+  <void property="firstName">
+   <string>Abdul</string>
+  </void>
+  <void property="id">
+   <int>20</int>
+  </void>
+  <void property="lastName">
+   <string>Mehmed</string>
+  </void>
+ </object>
+</java>

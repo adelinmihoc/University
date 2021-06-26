@@ -1,0 +1,19 @@
+
+<form [formGroup]="addressDeleteForm">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Delete Address</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="id" id="id" name="id" placeholder="id or number">
+    </mat-form-field> <br>
+    <mat-error *ngIf="id">
+      <div *ngIf="id.invalid && (id.dirty || id.touched)">
+        Please enter a valid id
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" (click)="onSubmitDeleteById(addressDeleteForm)">Delete by id</button>
+    <button mat-button color="accent" (click)="onSubmitDeleteByNumber(addressDeleteForm)">Delete by number</button>
+  </div>
+</form>

@@ -1,0 +1,33 @@
+
+<form [formGroup]="orderUpdateForm" (ngSubmit)="onSubmit(orderUpdateForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Change Order Status</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="id" id="id" name="id" placeholder="id">
+    </mat-form-field> <br>
+    <mat-error *ngIf="id">
+      <div *ngIf="id.invalid && (id.dirty || id.touched)">
+        Please enter a valid id
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" id="status" >
+        <mat-option value="pending">pending</mat-option>
+        <mat-option value="delivered">delivered</mat-option>
+        <mat-option value="outOfStock">outOfStock</mat-option>
+        <mat-option value="canceled">canceled</mat-option>
+      </mat-select>
+    </mat-form-field> <br>
+    <mat-error *ngIf="status">
+      <div *ngIf="status.invalid && (status.dirty || status.touched)">
+        Please enter a valid status
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" type="submit">Update</button>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+unnamed package
+domain
+domain.Validators
+repository
+repository.FileRepositories
+repository.FileRepositories.TextRepositories
+repository.FileRepositories.XMLRepositories
+repository.InMemoryRepositories
+service
+ui

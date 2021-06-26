@@ -1,0 +1,35 @@
+
+<form [formGroup]="addressAddForm" (ngSubmit)="onSubmit(addressAddForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Add Address</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="city" id="city" name="city" placeholder="city">
+    </mat-form-field> <br>
+    <mat-error *ngIf="city">
+      <div *ngIf="city.invalid && (city.dirty || city.touched)">
+        Please enter a valid city
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="street" placeholder="street">
+    </mat-form-field><br>
+    <mat-error *ngIf="street">
+      <div *ngIf="street.invalid && (street.dirty || street.touched)">
+        Please enter a valid street
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="number" placeholder="number">
+    </mat-form-field><br>
+    <mat-error *ngIf="number">
+      <div *ngIf="number.invalid && (number.dirty || number.touched)">
+        Please enter a valid number
+      </div>
+    </mat-error>
+    <button mat-button color="accent" type="submit">Add</button>
+  </div>
+</form>

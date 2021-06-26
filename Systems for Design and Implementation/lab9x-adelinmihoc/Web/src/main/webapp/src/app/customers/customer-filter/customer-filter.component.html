@@ -1,0 +1,55 @@
+<h2>Customers</h2>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>firstName</th>
+    <th>lastName</th>
+    <th>phoneNumber</th>
+    <th>age</th>
+    <th>addressId</th>
+  </tr>
+  <tr *ngFor="let customer of customers">
+    <td>{{customer.id}}</td>
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.lastName}}</td>
+    <td>{{customer.phoneNumber}}</td>
+    <td>{{customer.age}}</td>
+    <td>{{customer.address.id}}</td>
+  </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+
+<form [formGroup]="customerFilterForm">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Filter customers by name</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="name" id="name" name="name" placeholder="name">
+    </mat-form-field> <br>
+
+    <button mat-button color="accent" (click)="onSubmitFilterByName(customerFilterForm)">
+      Filter by name
+    </button>
+
+    <br>
+
+    <mat-form-field>
+      <input matInput formControlName="age1" id="age1" name="age1" placeholder="age1">
+    </mat-form-field> <br>
+
+    <mat-form-field>
+      <input matInput formControlName="age2" id="age2" name="age2" placeholder="age2">
+    </mat-form-field> <br>
+
+    <button mat-button color="accent" (click)="onSubmitFilterByAgeInterval(customerFilterForm)">
+      Filter by age interval
+    </button>
+
+  </div>
+</form>

@@ -1,0 +1,30 @@
+<h2>Filter Coffee</h2>
+
+<div *ngIf="coffees" [style.height.%]="coffees.length*3">
+  <table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>origin</th>
+      <th>price</th>
+      <th>quantity</th>
+    </tr>
+    <tr *ngFor="let coffee of coffees | filter: searchtext">
+      <td>{{coffee.id}}</td>
+      <td>{{coffee.name}}</td>
+      <td>{{coffee.origin}}</td>
+      <td>{{coffee.price}}</td>
+      <td>{{coffee.quantity}}</td>
+    </tr>
+  </table>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="matFormWrapper">
+<mat-form-field>
+  <input matInput [(ngModel)]="searchtext" placeholder="filter by name or origin">
+</mat-form-field>
+</div>

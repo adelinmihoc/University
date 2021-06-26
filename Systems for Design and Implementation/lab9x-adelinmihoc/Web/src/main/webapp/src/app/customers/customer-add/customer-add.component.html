@@ -1,0 +1,54 @@
+
+<form [formGroup]="customerAddForm" (ngSubmit)="onSubmit(customerAddForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Add Customer</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="firstName" id="firstName" name="firstName" placeholder="firstName">
+    </mat-form-field> <br>
+    <mat-error *ngIf="firstName">
+      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+        Please enter a valid firstName
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="lastName" placeholder="lastName">
+    </mat-form-field><br>
+    <mat-error *ngIf="lastName">
+      <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+        Please enter a valid lastName
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="phoneNumber" placeholder="phoneNumber">
+    </mat-form-field><br>
+    <mat-error *ngIf="phoneNumber">
+      <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+        Please enter a valid phoneNumber
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="age" placeholder="age">
+    </mat-form-field><br>
+    <mat-error *ngIf="age">
+      <div *ngIf="age.invalid && (age.dirty || age.touched)">
+        Please enter a valid age
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="addressId" placeholder="addressId">
+    </mat-form-field><br>
+    <mat-error *ngIf="addressId">
+      <div *ngIf="addressId.invalid && (addressId.dirty || addressId.touched)">
+        Please enter a valid addressId
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" type="submit">Add</button>
+  </div>
+</form>

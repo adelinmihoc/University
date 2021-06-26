@@ -1,0 +1,44 @@
+
+<form [formGroup]="coffeeAddForm" (ngSubmit)="onSubmit(coffeeAddForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Add Coffee</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="name" id="name" name="name" placeholder="name">
+    </mat-form-field> <br>
+    <mat-error *ngIf="name">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        Please enter a valid name
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="origin" placeholder="origin">
+    </mat-form-field><br>
+    <mat-error *ngIf="origin">
+      <div *ngIf="origin.invalid && (origin.dirty || origin.touched)">
+        Please enter a valid origin
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="price" placeholder="price">
+    </mat-form-field><br>
+    <mat-error *ngIf="price">
+      <div *ngIf="price.invalid && (price.dirty || price.touched)">
+        Please enter a valid price
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="quantity" placeholder="quantity">
+    </mat-form-field><br>
+    <mat-error *ngIf="quantity">
+      <div *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)">
+        Please enter a valid quantity
+      </div>
+    </mat-error>
+    <button mat-button color="accent" type="submit">Add</button>
+  </div>
+</form>

@@ -1,0 +1,26 @@
+<h2>Addresses</h2>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>city</th>
+    <th>number</th>
+    <th>street</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor="let address of addresses">
+    <td>{{address.id}}</td>
+    <td>{{address.city}}</td>
+    <td>{{address.number}}</td>
+    <td>{{address.street}}</td>
+    <td>
+      <button mat-button color="accent" (click)="deleteAddress(address.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-button color="accent"
+              (click)="goToUpdate(address.id, address.city, address.street, address.number)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </tr>
+</table>

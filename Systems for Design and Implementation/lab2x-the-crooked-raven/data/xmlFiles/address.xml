@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?><Addresss><Address id="20">
+  <city>Moscow</city>
+  <street>Kremlin Street</street>
+  <number>45</number>
+</Address>
+<Address id="10">
+  <city>LosAngeles</city>
+  <street>Palm Street</street>
+  <number>20</number>
+</Address>
+</Addresss>

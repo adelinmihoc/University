@@ -1,0 +1,49 @@
+
+<form [formGroup]="orderAddForm" (ngSubmit)="onSubmitAdd(orderAddForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Add Order</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="customerId" name="customerId" placeholder="customerId">
+    </mat-form-field> <br>
+    <mat-error *ngIf="customerId">
+      <div *ngIf="customerId.invalid && (customerId.dirty || customerId.touched)">
+        Please enter a valid customerId
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" type="submit">Add</button>
+  </div>
+</form>
+
+<br>
+<br>
+<br>
+
+<form [formGroup]="orderAddToForm" (ngSubmit)="onSubmitAddTo(orderAddToForm)">
+  <div class="matFormWrapper">
+    <h2 class="h2form">Add to Order</h2>
+    <hr>
+
+    <mat-form-field>
+      <input matInput formControlName="orderId" id="orderId" name="orderId" placeholder="orderId">
+    </mat-form-field> <br>
+    <mat-error *ngIf="orderId">
+      <div *ngIf="orderId.invalid && (orderId.dirty || orderId.touched)">
+        Please enter a valid orderId
+      </div>
+    </mat-error>
+
+    <mat-form-field>
+      <input matInput formControlName="coffeeId" id="coffeeId" name="coffeeId" placeholder="coffeeId">
+    </mat-form-field> <br>
+    <mat-error *ngIf="coffeeId">
+      <div *ngIf="coffeeId.invalid && (coffeeId.dirty || coffeeId.touched)">
+        Please enter a valid coffeeId
+      </div>
+    </mat-error>
+
+    <button mat-button color="accent" type="submit">Add</button>
+  </div>
+</form>

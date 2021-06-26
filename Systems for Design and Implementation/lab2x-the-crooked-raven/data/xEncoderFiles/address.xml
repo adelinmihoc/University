@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15" class="java.beans.XMLDecoder">
+ <object class="domain.Address">
+  <void property="city">
+   <string>Moscow</string>
+  </void>
+  <void property="id">
+   <int>20</int>
+  </void>
+  <void property="number">
+   <int>45</int>
+  </void>
+  <void property="street">
+   <string>Kremlin Street</string>
+  </void>
+ </object>
+ <object class="domain.Address">
+  <void property="city">
+   <string>LosAngeles</string>
+  </void>
+  <void property="id">
+   <int>10</int>
+  </void>
+  <void property="number">
+   <int>20</int>
+  </void>
+  <void property="street">
+   <string>Palm Street</string>
+  </void>
+ </object>
+</java>
