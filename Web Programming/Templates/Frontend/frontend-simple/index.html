@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Programming</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="authentication.js"></script>
+    <script src="AjaxCalls.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<br>
+
+<button style="float: right" onclick="logout()">Logout</button>
+
+<h1>Web Programming</h1>
+
+<br>
+
+<div id="message">
+
+</div>
+
+<div class="formWrapper" id="simpleLoginFormWrapper">
+    <h2>Login</h2>
+    <form id="simpleLoginForm">
+        <label>
+            username:
+            <input id="simpleUsernameInput">
+        </label>
+    </form>
+    <br>
+    <button onclick="simpleAuthentication()">login</button>
+</div>
+
+<div class="formWrapper" id="fullLoginFormWrapper">
+    <h2>Login</h2>
+    <form id="fullLoginForm">
+        <label>
+            username:
+            <input id="fullUsernameInput">
+        </label>
+        <br>
+        <label>
+            password:
+            <input id="fullPasswordInput">
+        </label>
+        <br>
+        <label>
+            size:
+            <input id="fullSizeInput">
+        </label>
+    </form>
+    <br>
+    <button onclick="fullAuthentication()">login</button>
+    <br>
+    <br>
+<!--    <h2>Register</h2>-->
+<!--    <form id="fullRegisterForm">-->
+<!--        <label>-->
+<!--            username:-->
+<!--            <input id="fullRegisterUsernameInput">-->
+<!--        </label>-->
+<!--        <br>-->
+<!--        <label>-->
+<!--            password:-->
+<!--            <input id="fullRegisterPasswordInput">-->
+<!--        </label>-->
+<!--    </form>-->
+<!--    <br>-->
+<!--    <button onclick="fullRegistration()">register</button>-->
+</div>
+
+<div id="mainWrapper">
+
+    <h2>Files with word apparitions</h2>
+    <table id="recordTable">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>userid</th>
+            <th>filename</th>
+            <th>filecontent</th>
+            <th>size</th>
+            <th>wordApparitions</th>
+        </tr>
+        </thead>
+        <tbody id="recordTableBody">
+
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <div class="formWrapper">
+        <h2>Main Form</h2>
+        <form id="mainForm">
+            <label>
+                input a word:
+                <input id="wordInput">
+            </label>
+        </form>
+        <br>
+        <button onclick="populateTable()">search word</button>
+        <button onclick="getMostPopular()">most popular word</button>
+<!--        <button onclick="updateButtonHandler()">update</button>-->
+    </div>
+
+    <br>
+    <br>
+    <h3>The most popular searched word all time is:</h3>
+    <div id="popularWord">
+    </div>
+
+    <br>
+    <br>
+    <br>
+</div>
+
+</body>
+
+<script>authenticated()</script>
+<script>displayContent()</script>
+<!--<script>populateTable()</script>-->
+
+</html>

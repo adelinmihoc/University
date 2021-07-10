@@ -1,0 +1,97 @@
+
+
+
+
+<div class="formWrapper" id="simpleLoginFormWrapper" *ngIf="getAuthenticated() === 'false' && getAuthenticationType() === 'simple'">
+  <h2>Login</h2>
+  <form id="simpleLoginForm">
+    <label>
+      username:
+      <input id="simpleUsernameInput" #simpleUsernameInput>
+    </label>
+  </form>
+  <br>
+  <button (click)="simpleAuthentication(simpleUsernameInput.value)">login</button>
+</div>
+
+<div class="formWrapper" id="fullLoginFormWrapper" *ngIf="getAuthenticated() === 'false' && getAuthenticationType() === 'full'">
+  <h2>Login</h2>
+  <form id="fullLoginForm">
+    <label>
+      username:
+      <input id="fullUsernameInput" #fullUsernameInput>
+    </label>
+    <br>
+    <label>
+      password:
+      <input id="fullPasswordInput" #fullPasswordInput>
+    </label>
+  </form>
+  <br>
+  <button (click)="fullAuthentication(fullUsernameInput.value, fullPasswordInput.value)">login</button>
+  <br>
+  <br>
+  <h2>Register</h2>
+  <form id="fullRegisterForm">
+    <label>
+      username:
+      <input id="fullRegisterUsernameInput" #fullRegisterUsernameInput>
+    </label>
+    <br>
+    <label>
+      password:
+      <input id="fullRegisterPasswordInput" #fullRegisterPasswordInput>
+    </label>
+  </form>
+  <br>
+  <button (click)="fullRegistration(fullRegisterUsernameInput.value, fullRegisterPasswordInput.value)">register</button>
+</div>
+
+
+
+<div class="mainWrapper" *ngIf="getAuthenticated() === 'true'">
+  <h1>Entities</h1>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>genre</th>
+    </tr>
+    <tr *ngFor="let entity of entities;let i = index" (click)="rowClick(entity)">
+      <td *ngIf="i >= start && i <= end">{{entities[i].id}}</td>
+      <td *ngIf="i >= start && i <= end">{{entities[i].title}}</td>
+      <td *ngIf="i >= start && i <= end">{{entities[i].genre}}</td>
+    </tr>
+  </table>
+  <button *ngIf="pagination" (click)="decrement()"><</button>
+  <button *ngIf="pagination" (click)="increment()">></button>
+  <br>
+  <br>
+  <br>
+  <div class="formWrapper">
+    <h2>Main Form</h2>
+    <form id="mainForm">
+      <label>
+        id:
+        <input  #idInput name="idInput" value="{{currentEntity!=null ? currentEntity.id : ''}}" >
+      </label>
+      <br>
+      <label>
+        title:
+        <input #titleInput value="{{currentEntity!=null ? currentEntity.title : ''}}">
+      </label>
+      <br>
+      <label>
+        genre:
+        <input #genreInput value="{{currentEntity!=null ? currentEntity.genre : ''}}">
+      </label>
+    </form>
+    <br>
+    <button (click)="addEntity(titleInput.value, genreInput.value)">add</button>
+    <button (click)="deleteEntity(Number(idInput.value))">delete</button>
+    <button (click)="updateEntity(Number(idInput.value), titleInput.value, genreInput.value)">update</button>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
