@@ -5,6 +5,7 @@
 - Identification of concepts and models for computing systems and computer networks
 
 ## Syllabus
+
 #### 1. WWW history and concepts: The Internet addressing mechanism, name servers, URLs and URIs
 #### 2. HTML – HyperText Markup Language. HTML 5
 #### 3. HTTP – HyperText Transfer Protocol
